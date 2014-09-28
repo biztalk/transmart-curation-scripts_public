@@ -12,7 +12,7 @@ outputDir = "/home/wim//Projects/compare_GEO_R_Scripts/bioConductor/"
 gseList <- getGEO(geo_id)
 
 #create the output subdirectories and the outputFilePaths
-geo_id <-paste(geo_id, "-noIndivExtraction",sep="")
+geo_id <-paste(geo_id, "-2",sep="")
 
 #create the output subdirectories and the outputFilePaths
 outputInfo <- createOutputDirsAndFiles(outputDir,geo_id )
