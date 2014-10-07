@@ -38,6 +38,9 @@ pdSubset <- splitLevelsOfDataFrameColums(pdSubset, c("time","lesional",  "respon
 
 levels(pdSubset$time) <- c("week_00","week_12", "week_02")
 
+#remove the NA string in the scorad levels
+levels(pdSubset$scorad)[44] <- ""
+
 #select a further subset of the phenotypic data that describe the individuals. One column should uniquely identify the individuals
 pdClinicalSubset = pdSubset[c( "individual", "organism", "time","lesional","responder", "age", "gender", "scorad"  )]
 
