@@ -78,14 +78,15 @@ else:
 				words = line.strip('\n').split('\t')
 
 				probe_id = words[0]
-				gene_symbol = words[2].split('///')[0]
-				gene_id = words[3].split('///')[0]
+				speciesName = words[3].split('///')[0]
+				gene_symbol = words[10].split('///')[0]
+				gene_id = words[11].split('///')[0]
 
 				if thisthefirstoutputline:
 					thisthefirstoutputline = 0
 				else:
 					outfile.write('\n')
 
-				outfile.write(gpl_id+'\t'+probe_id+'\t'+gene_symbol+'\t'+gene_id+'\t\"'+organism+'\"')
+				outfile.write(gpl_id+'\t'+probe_id+'\t'+gene_symbol+'\t'+gene_id+'\t\"'+speciesName+'\"')
 
 	print "Output written to "+outfilename
